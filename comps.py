@@ -1,27 +1,30 @@
-# Editable target and peer inputs
+
+# ============================================
+# EDITABLE TARGET AND PEER INPUTS
+# Valuation date: September 1, 2026
+# ============================================
 
 target = {
-    "name": "Asbury Automotive",
-    "ticker": "ABG",
-    "price": 243.03,
-    "eps": 21.50,
+    "name": "Microsoft Corporation",
+    "ticker": "MSFT",
+    "price": 501.02,
+    "eps": 17.95,
 }
 
 peers = [
     {
-        "name": "AutoNation",
-        "ticker": "AN",
-        "price": 169.84,
-        "eps": 16.92,
+        "name": "Oracle Corporation",
+        "ticker": "ORCL",
+        "price": 141.32,
+        "eps": 5.83,
     },
     {
-        "name": "Group 1 Automotive",
-        "ticker": "GPI",
-        "price": 421.48,
-        "eps": 36.81,
+        "name": "Adobe Inc.",
+        "ticker": "ADBE",
+        "price": 286.08,
+        "eps": 16.70,
     },
 ]
-
 
 def valid_company(company):
     return (
