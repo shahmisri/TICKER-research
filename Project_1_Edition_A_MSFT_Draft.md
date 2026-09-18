@@ -55,7 +55,7 @@ This confirms the mechanics: enterprise value is converted to common-equity valu
 
 ## Unknowns and risks
 
-- The current market price, market capitalization, and implied valuation multiples on September 1, 2026.
+- Market capitalization and implied valuation multiples on September 1, 2026; the September 1 closing share price used in the valuation comparison is $501.02.
 - The pace and durability of Azure growth, including demand, capacity availability, competition, and customer spending.
 - The scale, timing, and useful life of AI-related capital expenditures and their effect on free cash flow.
 - The appropriate revenue-growth path, operating-margin path, tax rate, reinvestment rate, WACC, and terminal growth rate.
@@ -77,5 +77,70 @@ This confirms the mechanics: enterprise value is converted to common-equity valu
 
 > Partner name: Connor Guthrie  
 > Question: to send to partner: “What single fact or valuation result would most strongly falsify my watch/defer thesis on Microsoft, and why?
+## Lab 08 — Peer Policy and Selection
 
+### Peer policy
+
+Target: Microsoft Corporation (MSFT)  
+Comparison date: September 1, 2026.
+
+I will consider listed operating technology companies whose business economics materially overlap with Microsoft's core operations, particularly enterprise software, cloud computing, and recurring subscription-based services. A candidate must have positive annual reported diluted EPS that was publicly available by September 1, 2026 and a stock price available on the comparison date.
+
+I will exclude a candidate if its primary business economics are not sufficiently comparable with Microsoft, if annual diluted EPS is zero or negative, or if the required earnings information was not public by the valuation date. Differences in business mix, scale, growth, and profitability will be documented rather than ignored.
+
+### Candidate investigation and decisions
+
+| Candidate | Business-model evidence | Annual reported diluted EPS | Important difference from Microsoft | Decision |
+| --- | --- | ---: | --- | --- |
+| Oracle (ORCL) | Oracle provides enterprise applications and infrastructure through cloud, on-premise, and hybrid deployment models. Its cloud offerings include Oracle Cloud Applications and Oracle Cloud Infrastructure. | FY2026 diluted EPS: $5.83 | Oracle is more concentrated in enterprise applications, databases, and cloud infrastructure, while Microsoft has a broader mix including productivity software, Windows, gaming, advertising, devices, and cloud. | USE |
+| Adobe (ADBE) | Adobe generates substantial subscription revenue through Digital Media and Digital Experience products, including Creative Cloud, Acrobat, and enterprise digital-experience solutions. | FY2025 diluted EPS: $16.70 | Adobe is more concentrated in creative software, document productivity, and digital-experience products and does not have Microsoft's broad cloud-infrastructure and operating-system exposure. | QUALIFY |
+
+### Decision rationale
+
+I use Oracle because its enterprise software and cloud infrastructure operations provide meaningful economic overlap with Microsoft's enterprise software and Azure businesses. Oracle's FY2026 Form 10-K reports diluted EPS of $5.83.
+
+I qualify Adobe rather than treating it as a perfect comparable. Its subscription software model and enterprise/customer productivity products overlap with parts of Microsoft's economics, but Adobe has a narrower business mix. Adobe's FY2025 Form 10-K reports diluted EPS of $16.70.
+
+Both candidates have positive annual reported diluted earnings available before my September 1, 2026 valuation date. I retain their differences as limitations rather than selecting peers based on which produces a preferred valuation result.
+
+### Sources
+
+Oracle Corporation, FY2026 Form 10-K, Item 1 Business and consolidated financial statements:
+https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm
+
+Adobe Inc., FY2025 Form 10-K, business discussion and earnings-per-share note:
+https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm
+
+## Lab 08 — Comparable-company validation
+
+**Validation:** Oracle's P/E is $141.32 ÷ $5.83 = 24.2401×, which matches the calculator. Before removing Oracle, I expected the implied Microsoft value to decrease because Oracle has the higher P/E multiple. The leave-one-out test confirms this: removing Oracle reduces the implied price from $371.30 to $307.49, a decrease of $63.81. Removing Adobe instead increases the implied price to $435.11. This shows that the valuation is sensitive to peer selection and that removing either company significantly reduces the information in an already small two-peer set.
+## Lab 08 — DCF and Peer Comparison
+| Method | Result | Main support | Main limitation |
+| --- | ---: | --- | --- |
+| DCF | Base case: $197.60/share; sensitivity range: $158.51–$267.64 | Values Microsoft from forecast FCFF using explicit operating assumptions, WACC, and terminal growth | Sensitive to WACC, terminal growth, and forecast assumptions; 74.28% of enterprise value comes from terminal value |
+| Peer P/E | Median-implied: $371.30/share; peer-implied range: $307.49–$435.11 | Applies the observed P/E multiples of Oracle and Adobe to Microsoft's annual diluted EPS | Sensitive to peer selection and differences in business mix, growth, scale, and profitability |
+| Market price | $501.02/share on September 1, 2026 | Same-date market-price reference | Market price reflects expectations not necessarily captured by either valuation method |
+
+The two valuation methods produce substantially different results. My DCF base case is $197.60 per share, with a sensitivity range of $158.51–$267.64. The peer P/E method gives a median-implied value of $371.30 and a peer-implied range of $307.49–$435.11. I do not mechanically average the methods because they rely on different assumptions and evidence.
+
+The DCF is particularly sensitive to long-run assumptions because 74.28% of enterprise value comes from terminal value. The peer valuation is also sensitive to peer selection. Removing Oracle lowers the implied value to $307.49, while removing Adobe raises it to $435.11.
+
+The September 1, 2026 market price of $501.02 is above both the DCF sensitivity range and the peer-implied range. The reverse DCF finds no solution within the tested uniform explicit-growth shift bracket of -5% to +10%, holding starting FCFF, WACC, terminal growth, cash, debt, diluted shares, and the relative differences among the five growth rates fixed.
+
+## Provisional Call
+
+My provisional decision remains **watch / defer**. The DCF and peer methods disagree substantially, and both remain below the September 1 market price. Rather than averaging the methods, I would investigate whether the difference reflects conservative DCF assumptions, limitations in the peer set, or market expectations that are not captured by my current model.
+
+## What Could Change My Decision
+
+I could change my decision if additional evidence supports materially different long-term cloud growth, margins, reinvestment, WACC, or terminal-growth assumptions while remaining consistent with Microsoft's operating evidence. A better-supported peer set that materially changes the comparable valuation could also affect my conclusion.
+## Lab 08 — Skeptical-Colleague Review
+
+The skeptical review identified peer comparability as the weakest-supported assumption because Oracle and Adobe overlap with only portions of Microsoft's broader business mix. It also identified the need to ensure that the target and peer prices, valuation date, valuation object, and earnings definitions are consistent.
+
+**Disposition: ACCEPT.** The criticism is supported by my validation. The leave-one-out test shows that peer selection materially affects the P/E result: removing Oracle produces $307.49 per share, while removing Adobe produces $435.11 per share. I therefore retain peer selection as an important limitation rather than treating the $371.30 median-implied value as a precise estimate.
+
+I also checked the date consistency. My comparison date is September 1, 2026, and the market-price input used in the revised analysis is $501.02. The DCF and P/E outputs are both ultimately expressed as value per share, although the DCF reaches equity value through an FCFF enterprise-value bridge while P/E directly applies an equity multiple to diluted EPS.
+
+**Question that could change my decision:** If I use operating evidence to reassess the assumptions driving the gap between my DCF and peer valuation, can a defensible DCF case move materially toward the peer-implied range without requiring assumptions unsupported by Microsoft's filings?
 
