@@ -67,139 +67,33 @@ The review did not change my watch/defer conclusion because I did not identify n
 
 ---
 
-## Reviewer: Adobe (ADBE)
+Reviewer : ADOBE
+1. Target selection
+     I selected Adobe because it earns primarily recurring subscription revenue from Creative Cloud, Document Cloud, and Digital
+     Experience. My initial view was that its high-margin, capital-light software model made it suitable for FCFE/DCF and peer P/E
+     analysis.
 
-### Selection and Evidence
+  2. Company and evidence
+     I used Adobe’s FY2023–FY2025 10-Ks, in USD millions. Revenue rose from $19,409m to $23,769m; gross margin reached 89.27%; Adobe
+     reported no discrete inventory or floor-plan financing balance. See adobe_proforma_research.md.
 
-**Question asked:**  
-Why did you select Adobe, and which primary source supports one of your important assumptions?
+  3. My pro forma
+     I turned history into forecast inputs: revenue growth fading from 8% to 4%, 89% gross margin, and SG&A/gross profit fading from
+     38.5% to 38.0%. The linked 2026–2030 statements balance every year, with cash above the model floor; however, working capital,
+     financing, repayment, and buyback inputs remain placeholders.
 
-**Answer:**  
-Adobe was selected because it is an established software company with a recurring subscription-based business model and enough public financial information to build a pro-forma and valuation. Adobe's SEC filings and investor materials provide primary-source evidence for the historical financial results used in the forecast.
+  4. Valuation
+     My saved FCFF DCF base value was $407.95 per diluted share, with a $341.22–$582.55 sensitivity range; it uses USD, 427m diluted
+     shares, 10.33% WACC, and 3% terminal growth. The peer P/E analysis used Nov. 7, 2025 USD prices and annual GAAP diluted EPS,
+     producing $169.59–$717.41; I do not average these because the dates, earnings basis, and methods differ. The reverse DCF had no
+     solution for the $250.35 target inside the selected growth-shift bracket.
 
-### Model and Valuation
+  5. Sensitivity and drivers
+     Over my stated ranges, revenue growth had the larger FY2030 span: $3,313.1m operating profit and $2,683.6m FCFE, versus $565.9m and
+     $458.4m for SG&A/gross profit. That does not prove growth is inherently more important, because growth used a wider ±2-point range
+     while SG&A used ±1 point; higher growth flows through revenue, gross profit, operating profit, and then FCFE.
 
-**Question asked:**  
-Can you trace one major assumption through your model to valuation?
-
-**Answer:**  
-Revenue growth is an important assumption. Changes in expected revenue growth affect forecast revenue, which affects operating profit and cash flow and ultimately changes valuation.
-
-**Revenue growth → Revenue → Operating profit → Cash flow → Valuation**
-
-### Sensitivity and Interpretation
-
-**Question asked:**  
-Does your sensitivity ranking depend on the ranges you tested, and what evidence would make you change your assumption?
-
-**Answer:**  
-Yes. The ranking depends on the specific ranges tested, so the highest-ranked driver is not necessarily the most uncertain. Evidence of changes in Adobe's subscription growth, pricing, customer retention, AI monetization, or margins could cause the forecast assumptions to change.
-
-### Future Driver
-
-**Question asked:**  
-What is a specific future driver for Adobe?
-
-**Answer:**  
-A specific future driver is Adobe's ability to monetize AI capabilities across its products while maintaining subscription growth. If AI products increase customer adoption, usage, or pricing opportunities, they could support future revenue growth and cash flow. If monetization is weaker than expected, the revenue assumptions may need to be revised.
-
-### Evidence / Calculation Checked
-
-**Source or calculation checked:**  
-Adobe pro-forma revenue-growth calculation.
-
-**What we checked:**  
-We traced the revenue-growth assumption through forecast revenue and operating results to see how it affected cash flow and valuation.
-
-### Explanation Back
-
-
-**Main driver:**  
-Revenue growth, including Adobe's ability to maintain subscription growth and monetize AI-related products.
-
-**Biggest limitation:**  
-The valuation depends on assumptions about future growth and margins, and historical performance does not guarantee that the same growth or profitability will continue.
-
-### Feedback
-
-**Strength:**  
-A strength of the analysis is that the forecast assumptions are connected to Adobe's underlying software business and operating performance.
-
-**Improvement:**  
-The analysis could more clearly connect Adobe-specific evidence about AI monetization, subscription growth, and customer demand to the exact revenue-growth assumption used in the model.
-
----
-
-# Reviewer: Nike (NKE)
-
-### Selection and Evidence
-
-**Question asked:**  
-Why did you select Nike, and which primary source supports one of your important assumptions?
-
-**Answer:**  
-Nike was selected because it is a large global consumer company with extensive public financial information and identifiable operating drivers such as consumer demand, sales growth, pricing, and margins. Nike's SEC filings and investor materials provide the historical financial information underlying the forecast.
-
-### Model and Valuation
-
-**Question asked:**  
-Can you trace one major assumption through your model to valuation?
-
-**Answer:**  
-Revenue growth is an important assumption because changes in consumer demand affect Nike's sales. Revenue then affects gross profit and operating income, which affects cash flow and ultimately valuation.
-
-**Consumer demand → Revenue → Gross profit and operating income → Cash flow → Valuation**
-
-### Sensitivity and Interpretation
-
-**Question asked:**  
-Does your sensitivity ranking depend on the ranges you tested, and what evidence would make you change your assumption?
-
-**Answer:**  
-Yes. The ranking only measures the effects over the specific ranges tested and does not show which scenario is most likely. Evidence of stronger or weaker consumer demand, changes in sales growth, pricing, inventory levels, or margins could cause the assumptions to change.
-
-### Future Driver
-
-**Question asked:**  
-What is a specific future driver for Nike?
-
-**Answer:**  
-A specific future driver is Nike's ability to restore sales growth through stronger product demand and innovation. If new products strengthen consumer demand while Nike maintains pricing and margins, revenue and cash flow could improve. If demand remains weak or greater discounting is required, revenue and margins could be lower than forecast.
-
-### Evidence / Calculation Checked
-
-**Source or calculation checked:**  
-Nike revenue-growth or gross-margin calculation in the pro-forma.
-
-**What we checked:**  
-We traced the forecast assumption through Nike's income statement and cash-flow calculation to see how the change affected valuation.
-
-
-### Explanation Back
-
-**Conclusion:**  
-[ADD NIKE PARTNER'S ACTUAL VALUATION CONCLUSION.]
-
-**Main driver:**  
-Future sales growth and Nike's ability to convert consumer demand into profitable cash-flow growth.
-
-**Biggest limitation:**  
-Future consumer demand and margins are uncertain, so changes in these assumptions could materially affect the valuation.
-
-### Feedback
-
-**Strength:**  
-A strength of the analysis is that the valuation is connected to identifiable operating drivers such as consumer demand, revenue growth, and margins.
-
-**Improvement:**  
-The analysis could more clearly connect Nike-specific evidence about sales trends, product demand, inventory, and margins to the exact assumptions used in the forecast.
-
----
-
-# Reflection
-
-The partner review helped me understand the difference between sensitivity and uncertainty. An assumption can have a large impact on valuation over the tested range without necessarily being the assumption most likely to change.
-
-The review also reinforced the importance of connecting company-specific business drivers to numerical forecast assumptions rather than relying only on historical trends.
-
-For Microsoft, the question I would investigate further is whether Azure and AI-driven growth can support my future revenue assumptions while Microsoft continues making significant investments in the infrastructure needed to support that growth.
+  6. Interpretation
+     My call is watch–defer. I can support balanced statements and operating-driver sensitivities, but I withhold a defensible new pro-
+     forma value per share until I source Adobe-specific working capital, debt/revolver terms, debt repayment, and buyback assumptions;
+     updated guidance and quarterly subscription growth could also change my forecast path.
