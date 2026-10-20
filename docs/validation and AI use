@@ -1,0 +1,62 @@
+Project 1 — Microsoft Model Validation and AI-Use Record
+Company: Microsoft Corporation (MSFT)
+Valuation date: September 1, 2026
+Prepared: October 19, 2026
+Investment recommendation: WATCH / DEFER
+1. Purpose and scope
+This document records the model outputs, source checks, sensitivity tests, validation observations, and AI-use disclosure supporting the Edition B research and investment committee materials. It distinguishes observed checks from outstanding verification. It is not a claim that all inputs or methods have been independently audited.
+2. Reproducible model outputs
+Model	Script	Base-case result
+FCFF discounted cash flow	dcf.py	$197.71/share
+FCFE pro-forma valuation	msft_proforma.py	$116.94/share
+Two-peer median P/E	comps.py	$371.30/share
+FCFF / FCFE comparison	project1_reconciliation.py	$80.77/share difference
+Interactive workbench	app.py	Displays both intrinsic estimates and scenario controls
+
+
+The valuation-date Microsoft reference price is $501.02/share. The three valuation methods are different scenarios and should not be averaged into a single target. Their base-case estimates are below the reference price.
+3. Historical data and source checks
+The Microsoft FY2026 Form 10-K was used to check operating cash flow of $182,935 million, capital expenditures of $115,948 million, interest expense of $3,051 million, and tax inputs used in the after-tax interest calculation. The revised starting FCFF is:
+$182,935m + $2,459.2199m − $115,948m = $69,446.2199m.
+The earlier starting FCFF was $69,408.2199m. Correcting the operating cash flow and capital expenditure inputs increased the FCFF valuation from approximately $197.60/share to $197.71/share. The Microsoft closing price of $501.02 on September 1, 2026 was checked against Yahoo Finance historical data.
+Outstanding check: The Oracle and Adobe historical share prices and EPS measurement conventions in the P/E model have not been independently verified for consistent valuation-date treatment. Their peer-implied result remains a provisional cross-check.
+4. Accounting and numerical validation
+The base-case pro-forma model passed its reported balance-sheet consistency checks. The FCFF, FCFE, peer-comparison, and reconciliation outputs were reproduced using the project Python scripts. These checks support internal reproducibility; they do not establish that the FCFF and FCFE models are economically equivalent.
+The FCFF DCF uses a 10% WACC, 3% terminal growth rate, and five-year FCFF growth path of 15%, 13%, 11%, 9%, and 7%. Approximately 74.28% of modeled enterprise value comes from terminal value, making the estimate sensitive to long-run assumptions.
+5. Sensitivity and failure/recovery tests
+Scenario	Observed or reported result
+FCFF: WACC 11%, terminal growth 2%	$158.60/share
+FCFF: WACC 10%, terminal growth 3%	$197.71/share
+FCFF: WACC 9%, terminal growth 4%	$267.78/share
+FCFE: higher revenue-growth path (+2 percentage points each forecast year)	Approximately $144.44/share
+FCFE: gross margin raised from 68% to 70%	Approximately $131.18/share
+Streamlit minimum cash requirement raised to $100,000m	Validation warning displayed
+Minimum cash requirement returned to $0	Base-case configuration restored
+
+
+All nine tested WACC/terminal-growth combinations in the Edition B grid are below the $501.02 reference price. The reverse-DCF search did not find a solution within its configured uniform growth-shift range of −5 to +10 percentage points; this is a limitation of that search range, not proof that the market price is impossible to justify.
+6. Model limitations and unresolved work
+- Different cash-flow approaches: The FCFF model forecasts FCFF directly and bridges enterprise value to equity; the FCFE model forecasts equity cash flows from simplified financial projections. Operating forecasts, financing flows, discount rates, and nonoperating adjustments have not been fully reconciled.
+- Terminal-value exposure: The DCF is heavily dependent on the terminal assumption.
+- Comparable-company limitations: Only Oracle and Adobe are used; peer selection materially changes the implied price, and price/EPS inputs require further independent verification.
+- Share count and bridge simplifications: FY2026 diluted weighted-average shares are used as a working denominator, not actual shares outstanding on the valuation date. The enterprise-to-equity bridge does not separately adjust for all possible nonoperating claims.
+- Forecast uncertainty: AI capital expenditures, cloud growth, margins, and returns on infrastructure spending are uncertain.
+7. AI-use disclosure and analyst responsibility
+AI assistance supported research organization, Python troubleshooting, code review, model documentation, drafting, and presentation preparation. AI-generated explanations and calculations were compared with the available model outputs where possible. The analyst is responsible for primary-source verification, model assumptions, financial interpretation, investment judgment, and the final recommendation. Any outstanding verification is disclosed above rather than represented as completed.
+8. Reproduction instructions
+From the TICKER-research repository with the project's Python environment activated, run:
+python dcf.py
+python msft_proforma.py
+python comps.py
+python project1_reconciliation.py
+python -m streamlit run app.py
+In the Streamlit app, inspect the base-case values, change gross margin from 68% to 70%, restore 68%, then set the minimum cash requirement to $100,000m and restore it to $0. Record the observed warnings and outcomes in the validation video and corrected transcript. The actual video and transcript are separate submission artifacts and are not included in this document.
+9. Supporting sources and files
+- Microsoft Corporation, FY2026 Form 10-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm
+- Yahoo Finance, MSFT historical prices: https://finance.yahoo.com/quote/MSFT/history/
+- Project_1_Edition_B_MSFT.md
+- project1_source_verification.md
+- project1_valuation_reconciliation.md
+- project1_validation.md
+- 2026-09-10_MSFT_DCF_Inputs.md
+- dcf.py, msft_proforma.py, comps.py, project1_reconciliation.py, app.py
