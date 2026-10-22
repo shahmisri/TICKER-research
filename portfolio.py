@@ -136,3 +136,97 @@ if __name__ == "__main__":
     except ValueError as error:
         print(f"ERROR: {error}")
         raise SystemExit(1)
+
+# LAB 15 — PORTFOLIO OPTIMIZER
+
+import numpy as np
+import pandas as pd
+from scipy.optimize import minimize
+
+
+def optimize_portfolio(
+    returns=None,
+    volatilities=None,
+    correlations=None,
+    target_return=0.065,
+    reserve_minimum=0.03,
+    step=0.05,
+):
+    if returns is None:
+        returns = RETURNS
+    if volatilities is None:
+        volatilities = VOLATILITIES
+    if correlations is None:
+        correlations = CORRELATIONS
+
+    covariance = np.array(correlations) * np.outer(
+        volatilities, volatilities
+    )
+
+    best = None
+
+    n_steps = round(1 / step)
+
+    for a in range(n_steps + 1):
+        for b in range(n_steps - a + 1):
+            for c in range(n_steps - a - b + 1):
+                d = n_steps - a - b - c
+
+                weights = np.array([a, b, c, d]) * step
+
+                portfolio_return = np.dot(weights, returns)
+
+                reserve = weights[0] + weights[1]
+
+                if portfolio_return < target_return - 1e-9:
+                    continue
+
+                if reserve < reserve_minimum - 1e-9:
+                    continue
+
+                variance = weights @ covariance @ weights
+                volatility = np.sqrt(max(variance, 0))
+
+                if best is None or volatility < best["volatility"]:
+                    best = {
+                        "weights": weights.tolist(),
+                        "return": float(portfolio_return),
+                        "volatility": float(volatility),
+                        "reserve": float(reserve),
+                    }
+
+    return best
+
+
+def estimate_from_prices(prices):
+    monthly_returns = prices.pct_change().dropna()
+
+    annual_returns = monthly_returns.mean() * 12
+    annual_volatilities = monthly_returns.std() * np.sqrt(12)
+    correlations = monthly_returns.corr()
+
+    return (
+        annual_returns,
+        annual_volatilities,
+        correlations,
+    )
+
+
+def run_optimizer_test():
+    print("\nLAB 15 — MINIMUM RISK PORTFOLIO")
+
+    result = optimize_portfolio()
+
+    if result is None:
+        print("No feasible portfolio found.")
+        return
+
+    for asset, weight in zip(ASSETS, result["weights"]):
+        print(f"{asset}: {weight * 100:.1f}%")
+
+    print(f"Expected return: {result['return'] * 100:.2f}%")
+    print(f"Volatility: {result['volatility'] * 100:.2f}%")
+    print(f"Reserve eligible: {result['reserve'] * 100:.1f}%")
+
+
+run_optimizer_test()
