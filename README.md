@@ -1,4 +1,3 @@
-**AI-use disclosure:** AI assisted in organizing the project and drafting its code and documentation. No market data, holdings, validation evidence, prediction, or experiment results were invented. The changed-input prediction must be written by the student without AI.
 
 **Education-only disclosure:** This application and its outputs are for educational purposes only and are not investment advice.
 
